@@ -1,0 +1,141 @@
+{
+  "normalizedBrief": {
+    "topic": "A student launches a startup after failing several times.",
+    "objective": "Motivate founders",
+    "audience": "Founders",
+    "tone": "Motivational",
+    "style": "Cinematic",
+    "durationSeconds": 45,
+    "platform": "LinkedIn"
+  },
+  "title": "The Hidden Failures",
+  "hook": "Everyone celebrates the first success. Nobody sees the failures before it.",
+  "storyArc": {
+    "setup": "Arjun struggles in his hostel room.",
+    "conflict": "He gets a rejection email.",
+    "escalation": "He rebuilds his prototype in the lab.",
+    "resolution": "He gets his first customer."
+  },
+  "characters": [
+    {
+      "id": "char_arjun",
+      "name": "Arjun",
+      "appearance": {
+        "age": 21,
+        "hair": "short black hair",
+        "clothing": "navy hoodie",
+        "build": "slim"
+      },
+      "consistencyAnchors": [
+        "navy hoodie",
+        "short black hair",
+        "thin black watch"
+      ]
+    }
+  ],
+  "locations": [
+    {
+      "id": "loc_hostel",
+      "name": "Hostel Room",
+      "palette": "cool blue",
+      "lighting": "dim desk lamp"
+    },
+    {
+      "id": "loc_lab",
+      "name": "College Lab",
+      "palette": "neutral white",
+      "lighting": "fluorescent overhead"
+    },
+    {
+      "id": "loc_demo",
+      "name": "Small Presentation Room",
+      "palette": "warm yellow",
+      "lighting": "bright sunlight from window"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene_1",
+      "order": 1,
+      "durationSeconds": 5,
+      "purpose": "Establish the struggle",
+      "locationId": "loc_hostel",
+      "characterIds": ["char_arjun"],
+      "action": "Arjun looking stressed over a failed prototype.",
+      "camera": "Medium close-up",
+      "lighting": "Dim desk lamp lighting his face",
+      "visualPrompt": "Medium close up of a 21-year-old student with short black hair and a navy hoodie, looking stressed over a circuit board on a desk in a dark room lit only by a desk lamp. Cinematic style.",
+      "negativePrompt": "blurry, low resolution",
+      "voiceover": "Everyone celebrates the first success."
+    },
+    {
+      "id": "scene_2",
+      "order": 2,
+      "durationSeconds": 5,
+      "purpose": "Show rejection",
+      "locationId": "loc_hostel",
+      "characterIds": ["char_arjun"],
+      "action": "Arjun looking at a laptop screen, sighing.",
+      "camera": "Over the shoulder",
+      "lighting": "Laptop screen glowing",
+      "visualPrompt": "Over the shoulder shot of a student in a navy hoodie looking at a laptop screen. The screen glows blue.",
+      "voiceover": "Nobody sees the failures before it."
+    },
+    {
+      "id": "scene_3",
+      "order": 3,
+      "durationSeconds": 5,
+      "purpose": "Rebuilding",
+      "locationId": "loc_lab",
+      "characterIds": ["char_arjun"],
+      "action": "Arjun actively soldering and rebuilding the prototype.",
+      "camera": "Close up on hands and face",
+      "lighting": "Bright fluorescent overhead",
+      "visualPrompt": "Close up of a young student in a navy hoodie soldering a circuit board in a brightly lit lab.",
+      "voiceover": "But failure isn't the end."
+    },
+    {
+      "id": "scene_4",
+      "order": 4,
+      "durationSeconds": 10,
+      "purpose": "First demo",
+      "locationId": "loc_demo",
+      "characterIds": ["char_arjun"],
+      "action": "Arjun presenting his working prototype excitedly.",
+      "camera": "Wide shot",
+      "lighting": "Warm sunlight",
+      "visualPrompt": "Wide shot of a student in a navy hoodie presenting a device in a sunlit room, looking excited.",
+      "voiceover": "It's just the required iteration."
+    },
+    {
+      "id": "scene_5",
+      "order": 5,
+      "durationSeconds": 10,
+      "purpose": "First customer",
+      "locationId": "loc_demo",
+      "characterIds": ["char_arjun"],
+      "action": "Arjun shaking hands with a person off-camera.",
+      "camera": "Medium shot",
+      "lighting": "Warm sunlight",
+      "visualPrompt": "Medium shot of a student in a navy hoodie shaking hands with someone in a sunlit room.",
+      "voiceover": "Until you find the one person who says yes."
+    },
+    {
+      "id": "scene_6",
+      "order": 6,
+      "durationSeconds": 10,
+      "purpose": "Closing shot",
+      "locationId": "loc_demo",
+      "characterIds": ["char_arjun"],
+      "action": "Arjun looking confidently at the camera.",
+      "camera": "Close up",
+      "lighting": "Warm sunlight",
+      "visualPrompt": "Close up of a confident young student in a navy hoodie looking directly at the camera in a sunlit room.",
+      "voiceover": "Keep building."
+    }
+  ],
+  "outputSpecification": {
+    "aspectRatio": "16:9",
+    "targetDuration": 45
+  }
+}

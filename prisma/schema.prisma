@@ -1,0 +1,84 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Project {
+  id             String      @id @default(uuid())
+  title          String
+  userId         String?
+  status         String      @default("DRAFT")
+  inputBrief     String
+  productionPlan Json?
+  outputUrl      String?
+  createdAt      DateTime    @default(now())
+  updatedAt      DateTime    @updatedAt
+  characters     Character[]
+  locations      Location[]
+  assets         Asset[]
+  scenes         Scene[]
+  renderJobs     RenderJob[]
+}
+
+model Character {
+  id                 String   @id @default(uuid())
+  projectId          String
+  project            Project  @relation(fields: [projectId], references: [id])
+  name               String
+  description        String
+  visualBible        Json
+  referenceAssetId   String?
+}
+
+model Location {
+  id             String   @id @default(uuid())
+  projectId      String
+  project        Project  @relation(fields: [projectId], references: [id])
+  name           String
+  description    String
+  visualBible    Json
+}
+
+model Asset {
+  id              String   @id @default(uuid())
+  projectId       String
+  project         Project  @relation(fields: [projectId], references: [id])
+  type            String
+  provider        String
+  providerAssetId String?
+  storageKey      String
+  metadata        Json
+  status          String
+}
+
+model Scene {
+  id              String   @id @default(uuid())
+  projectId       String
+  project         Project  @relation(fields: [projectId], references: [id])
+  order           Int
+  status          String   @default("PENDING")
+  durationSeconds Int
+  prompt          String
+  negativePrompt  String?
+  dialogue        String?
+  voiceover       String?
+  provider        String?
+  providerJobId   String?
+  assetUrl        String?
+  errorMessage    String?
+}
+
+model RenderJob {
+  id             String    @id @default(uuid())
+  projectId      String
+  project        Project   @relation(fields: [projectId], references: [id])
+  status         String
+  progress       Int       @default(0)
+  currentScene   Int       @default(0)
+  errorMessage   String?
+  startedAt      DateTime?
+  completedAt    DateTime?
+}
